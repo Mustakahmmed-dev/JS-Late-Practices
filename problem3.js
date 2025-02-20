@@ -59,3 +59,28 @@ console.log("Total Sum: ", totalNumValue);
 console.log("Total Special Chars: ", specialChars);
 
 
+// Show the letters, numbers and special characters in different var
+
+let mixedUps = "$5000BD500600l k 3535 F #2025 @G 2026";
+
+let allNum = "";
+let allLetters = "";
+let allSpecials = "";
+
+let alphabets = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+for(let ele of mixedUps){
+  if(!isNaN(ele) && ele !== " "){
+    allNum+= ele;
+  }
+  else if(alphabets.includes(ele.toLowerCase())){
+    allLetters+= ele;
+  }
+  else{
+    allSpecials+= ele.trim();
+  }
+}
+
+console.log("Total Num: ", allNum.length,":", allNum);
+console.log("Total Letters: ", allLetters.length,":", allLetters.toUpperCase());
+console.log("Total Specials: ", allSpecials.length,":", allSpecials);
