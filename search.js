@@ -1,13 +1,3 @@
-// Nesting obj testing
-let products = [
-    {name: "keyboard", price: 990},
-    car = {
-        name: "BMW",
-        model: ["B2020", "B2021", "B2025"],
-    }
-];
-// console.log(products[1].model[0]);
-
 // Grabbing the matched items/ search query
 let items = [
     {name: "maxpro phone", price: 21000},
