@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items Looping Test</title>
+
+    <style>
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px;
+            background-color: azure;
+
+        }
+
+        #btn-container {
+            max-width: 80%;
+            margin: 0 auto;
+
+        }
+
+        .btn {
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin: 15px;
+            background-color: teal;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h2>Current Balance : <span id="current-balance">4</span> </h2>
+        <h2>New Balance : <span id="new-balance">6</span> </h2>
+    </nav>
+
+    <div id="btn-container">
+        <button class="btn" >Complete1</button>
+        <button class="btn">Complete2</button>
+        <button class="btn">Complete3</button>
+        <button class="btn">Complete4</button>
+        <button class="btn">Complete5</button>
+    </div>
+
+    <script>
+
+
+        document.getElementById("btn-container").addEventListener("click", function (event) {
+            if (event.target.tagName === "BUTTON") {
+                let currentBalance = document.getElementById("current-balance").innerText;
+                let convertedCurrentBalance = parseFloat(currentBalance);
+
+                let newBalance = document.getElementById("new-balance").innerText;
+                let convertedNewBalance = parseFloat(newBalance);
+
+                if (convertedCurrentBalance > 0) {
+                    document.getElementById("current-balance").innerText = convertedCurrentBalance - 1;
+                    document.getElementById("new-balance").innerText = convertedNewBalance + 1;
+
+                    alert("Completion is done")
+
+                    event.target.disabled = true;
+                }
+                else{
+                    alert("Insufficient!")
+                }
+            }
+        })
+
+
+
+    </script>
+</body>
+
+</html>
