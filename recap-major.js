@@ -21,4 +21,11 @@ console.log("Default value setup for addition", result);
 // default value setup for multiplication
 const multiply = (a, b=1) => a * b ;
 
-console.log(multiply(10, 20));
+console.log("The multiplication default value setup", multiply(10, 20));
+
+
+// Default value setup for division using function
+const divide = (a, b = 2) => {
+    return a / b;
+}
+console.log(divide(20))
