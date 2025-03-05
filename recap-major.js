@@ -56,3 +56,21 @@ const [fruit1, fruit2, fruit3] = fruits;
 
 console.log("Fruit from arr destructuring: ", fruit2)
 
+// ====================================================
+
+// Spread operator
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+console.log(...months);
+
+const natoks = {
+    name: "hakku",
+    role: "acting",
+    figure: "boli boli muta"
+};
+const natok2 = {
+    name2: "Aziz",
+    role2: "motivations",
+    figure3: "normal",
+}
+const allNatoks = {...natoks, ...natok2}
+console.log(allNatoks);
