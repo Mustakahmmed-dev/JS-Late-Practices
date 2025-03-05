@@ -74,3 +74,33 @@ const natok2 = {
 }
 const allNatoks = {...natoks, ...natok2}
 console.log(allNatoks);
+
+
+// ============================================
+// Common use cases/options in obj
+const newObj = {
+    name: "Mustak",
+    age: 20,
+    country: "Myanmar"
+};
+newObj.passion = "Tech";
+Object.seal(newObj); //properties can't be added and deleted anymore
+delete newObj.name;
+
+newObj.age = 50;
+Object.freeze(newObj); //values can't be added or changed anymore
+
+newObj.passion = "Tech";
+// console.log(Object.entries(newObj))
+// console.log(Object.keys(newObj))
+console.log("Only the values from the Obj", Object.values(newObj));
+
+// Loop through the object
+for(let key in newObj){
+    console.log("key: ", key, "Values: ", newObj[key])
+}
+
+//Second
+for(let [key, value] of Object.entries(newObj)){
+    console.log("Last details: ", "key: ", key, " Value: ", value);
+}
